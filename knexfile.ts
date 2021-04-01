@@ -12,7 +12,7 @@ module.exports = {
     //   password: env.DB_PASSWORD,
     //   ssl: { rejectUnauthorized: false },
     // },
-    ssl: { rejectUnauthorized: false },
+    ssl: { sslmode: 'require',  rejectUnauthorized: false },
     migrations: {
       tableName: "knex_migrations",
       directory: "server/migrations"
