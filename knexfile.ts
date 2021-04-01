@@ -3,6 +3,7 @@ import env from "./server/env";
 module.exports = {
   production: {
     client: "postgresql",
+    // connection: env.DATABASE_URL,
     connection: {
       host: env.DB_HOST,
       database: env.DB_NAME,
@@ -11,6 +12,7 @@ module.exports = {
       password: env.DB_PASSWORD,
       ssl: { rejectUnauthorized: false },
     },
+    ssl: { rejectUnauthorized: false },
     migrations: {
       tableName: "knex_migrations",
       directory: "server/migrations"
